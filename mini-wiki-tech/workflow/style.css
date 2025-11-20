@@ -1,0 +1,57 @@
+/* Simple layout and typography for the workflow page */
+
+:root{
+	--bg: #f6f9fc;
+	--card: #ffffff;
+	--muted: #6b7280;
+	--accent: #0b63ce;
+	--text: #111827;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+	margin:0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+	background:var(--bg);
+	color:var(--text);
+	line-height:1.5;
+	-webkit-font-smoothing:antialiased;
+}
+
+.container{
+	max-width:900px;
+	margin:48px auto;
+	background:var(--card);
+	padding:28px 32px;
+	border-radius:10px;
+	box-shadow:0 6px 18px rgba(15,23,42,0.06);
+}
+
+h1{color:var(--accent);margin-top:0;font-size:1.6rem}
+h2{color:#0f172a;margin-bottom:0.25rem;font-size:1.05rem}
+
+p{color:var(--muted)}
+
+ol,ul{margin-top:0.5rem;margin-bottom:1rem;padding-left:1.2rem}
+li{margin-bottom:0.5rem}
+
+pre.cmd{
+	background:#f3f4f6;
+	padding:12px 14px;
+	border-radius:6px;
+	overflow:auto;
+	font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
+	font-size:0.95rem;
+	color:#0f172a;
+	border:1px solid rgba(15,23,42,0.04);
+}
+
+.note{color:var(--muted);font-size:0.95rem;margin-top:1.25rem}
+
+/* Responsive tweaks */
+@media (max-width:640px){
+	.container{margin:18px;padding:18px}
+	h1{font-size:1.35rem}
+}
+
