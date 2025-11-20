@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Commandes Git essentielles</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<h1>Commandes Git essentielles</h1>
+	<p class="note">Voici une liste de commandes Git courantes avec une brève description pour chaque commande. Ce guide rapide aide à effectuer les opérations Git de base.</p>
+	<table>
+		<caption>Commande / Description</caption>
+		<thead>
+			<tr>
+				<th>Commande</th>
+				<th>Description</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><code>git init</code></td>
+				<td>Initialise un nouveau dépôt Git local dans le répertoire courant.</td>
+			</tr>
+			<tr>
+				<td><code>git clone &lt;url&gt;</code></td>
+				<td>Copie un dépôt distant (clone) sur votre machine locale.</td>
+			</tr>
+			<tr>
+				<td><code>git status</code></td>
+				<td>Affiche les fichiers modifiés, ajoutés ou non suivis dans le dépôt.</td>
+			</tr>
+			<tr>
+				<td><code>git add &lt;fichier&gt;</code></td>
+				<td>Ajoute les changements d'un fichier (ou <code>git add .</code> pour tous) à l'index en vue d'un commit.</td>
+			</tr>
+			<tr>
+				<td><code>git commit -m "message"</code></td>
+				<td>Enregistre dans l'historique les modifications indexées avec un message descriptif.</td>
+			</tr>
+			<tr>
+				<td><code>git push [origin] [branche]</code></td>
+				<td>Envoie les commits locaux vers le dépôt distant (par défaut <code>origin</code>).</td>
+			</tr>
+			<tr>
+				<td><code>git pull</code></td>
+				<td>Récupère les changements distants et fusionne avec la branche locale courante.</td>
+			</tr>
+			<tr>
+				<td><code>git fetch</code></td>
+				<td>Télécharge les objets et refs depuis le dépôt distant sans fusionner automatiquement.</td>
+			</tr>
+			<tr>
+				<td><code>git branch</code></td>
+				<td>Liste les branches locales; <code>git branch &lt;nom&gt;</code> crée une nouvelle branche.</td>
+			</tr>
+			<tr>
+				<td><code>git checkout &lt;branche|commit&gt;</code></td>
+				<td>Bascule vers une autre branche ou restore l'état à un commit spécifique.</td>
+			</tr>
+			<tr>
+				<td><code>git merge &lt;branche&gt;</code></td>
+				<td>Fusionne la branche spécifiée dans la branche courante.</td>
+			</tr>
+			<tr>
+				<td><code>git rebase &lt;branche&gt;</code></td>
+				<td>Rejoue vos commits sur une autre base (utile pour un historique linéaire).</td>
+			</tr>
+			<tr>
+				<td><code>git log</code></td>
+				<td>Affiche l'historique des commits; utile avec <code>--oneline</code> ou <code>--graph</code>.</td>
+			</tr>
+			<tr>
+				<td><code>git reset --soft|--hard &lt;commit&gt;</code></td>
+				<td>Réinitialise la HEAD à un commit donné: <code>--soft</code> garde l'index, <code>--hard</code> efface les changements locaux.</td>
+			</tr>
+		</tbody>
+	</table>
+	<p style="margin-top:16px; max-width:900px;">Astuce rapide : combinez <code>git status</code>, <code>git add</code> et <code>git commit</code> pour enregistrer vos modifications locales, puis <code>git push</code> pour les transmettre au dépôt distant.</p>
+</body>
+</html>
