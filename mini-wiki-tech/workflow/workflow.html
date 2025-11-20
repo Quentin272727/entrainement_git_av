@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Workflow Git — Feature branches → Merge → PR</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div class="container">
+			<h1>Workflow Git simple</h1>
+
+			<p>Ceci est une explication concise d'un workflow Git courant pour travailler en équipe : on développe sur des branches de fonctionnalité (feature branches), puis on ouvre une Pull Request (PR) pour revue, et enfin on fusionne (merge) dans la branche principale.</p>
+
+			<h2>Résumé en 4 étapes</h2>
+			<ol>
+				<li><strong>Créer une branche de fonctionnalité</strong> depuis <code>main</code> (ou <code>develop</code> selon le projet).</li>
+				<li><strong>Travailler localement</strong> : commits atomiques et messages clairs, pousser la branche distante.</li>
+				<li><strong>Ouvrir une Pull Request (PR)</strong> pour revue et tests automatisés.</li>
+				<li><strong>Après approbation</strong> : fusion (merge) dans <code>main</code>, puis supprimer la branche de fonctionnalité si elle n'est plus utile.</li>
+			</ol>
+
+			<h2>Exemple de commandes</h2>
+			<pre class="cmd"># se placer sur main
+git checkout main
+git pull origin main
+
+# créer et basculer sur la branche de feature
+git checkout -b feat/ma-fonctionnalite
+
+# développer, ajouter, committer
+git add .
+git commit -m "feat: ajouter la fonctionnalité X"
+
+# pousser la branche
+git push -u origin feat/ma-fonctionnalite
+
+# ouvrir une PR sur la plateforme (GitHub/GitLab/Bitbucket)
+</pre>
+
+			<h2>Bonnes pratiques</h2>
+			<ul>
+				<li>Commits petits et décrits clairement.</li>
+				<li>Relectures de code (code review) obligatoires pour les changements significatifs.</li>
+				<li>Tests automatiques (CI) avant fusion.</li>
+				<li>Supprimer les branches fusionnées pour garder le dépôt propre.</li>
+			</ul>
+
+			<p class="note">Flux simple : <code>main</code> ← merge ← <code>feature/*</code> → PR → review → merge</p>
+		</div>
+	</body>
+</html>
